@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat";}
+
+:root
+{
+    --primary: #1ca3ea;
+    --textColor: #37424c;
+    --secondary: #8fa4b7;
+
+    --radius: 8px;
+}
+body
+{
+    margin:0;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(88,101,185,1) 0%, rgba(28,145,226,1) 35%, rgba(34,220,253,1) 85%);
+    color: var(--textColor);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1
+{margin: 0;}
+input
+{
+    border:none;
+    outline:none;  
+    padding-left: 10px; 
+    flex-grow: 1;
+}
+
+button
+{
+    border:none;
+    outline:none; 
+    cursor: pointer;
+    background-color: var(--primary) ;  
+    border-radius: var(--radius);
+    color:white;
+    padding: 10px 0;
+    width: 100%;
+
+    margin: 30px 0;
+}
+button:hover
+{
+    background-color: #42bdff;
+}
+a
+{
+    color: var(--primary);
+}
+a:hover
+{
+    text-decoration: none;
+}
+#container
+{
+    background-color: white;
+    width:500px;
+    padding: 70px 50px;
+    border-radius: var(--radius);
+
+    text-align: center;
+}
+.eingabe
+{
+    margin-top:30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox
+{
+    margin-bottom: 20px;  
+    text-align: left; 
+}
+
+
+.input
+{
+    border-bottom: 1px solid #8fa4b7;
+    padding: 10px 0 10px 4px;
+    display: flex;
+    align-items: center;
+}
+#meldung
+{
+    font-size: small;
+    color:#c00000;
+    height: 10px;
+}
+#passVergessen
+{
+    padding-top: 10px;
+    text-align: right;
+}
+
+#kontoErstellen>div
+{
+    margin-bottom: 5px;
+}
+
+table
+{
+   width: 80%;
+    margin: 30px auto;
+    text-align: left;
+}
+
+table th
+{
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 5px;   
+}
+
+table tr:nth-child(2)
+{
+    padding-top: 20px,
+}
+table th+th, td+td
+{
+    padding-left: 10px;
+}
+table th:nth-child(2), td:nth-child(2)
+{
+    border-right: 1px solid var(--secondary);
+    border-left: 1px solid var(--secondary);
+}
+
+#abmelden
+{
+    color:var(--textColor);
+    text-decoration: none;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe - Login</title>
+
+    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" crossorigin="anonymous">  
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div id="container">
+            <h1>{{ titel}} </h1>
+            <template class="wrapper" v-if="step == 1">
+                <div class="eingabe" >
+                    <div class="inputBox">
+                        <div class="inputText">
+                            Benutzername
+                        </div>
+                        <div class="input">
+                            <i class="far fa-user"></i>
+                            <input type="text" placeholder="Benutzername eingeben" v-model="bn_input">
+                        </div>
+                        <div id="meldung"> {{bn_meldung}} </div>
+                    </div>
+
+                    <div class="inputBox">
+                        <div class="inputText">
+                            Passwort
+                        </div>
+                        <div class="input">
+                            <i class="fal fa-lock-alt"></i>
+                            <input type="text" placeholder="Passwort eingeben" v-model="pass_input">
+                            
+                        </div>
+                        <div id="meldung"> {{pass_meldung}} </div>
+                        <div id="passVergessen"> Passwort vergessen?</div>
+                    </div>
+                    
+                </div>
+
+                <button @click="anmelden" @focus = "meldung_weg">Anmelden</button>
+
+                <div id="kontoErstellen">
+                    <div>Sie haben kein Konto?</div>
+                    
+                    <a href="">Jetzt registrieren</a>
+                </div>
+            </template>
+            
+        
+
+        <template class= "wrapper" v-else-if="step == 2" >
+            <table >
+                <tr>
+                  <th>Vorname</th>
+                  <th>Nachname</th>
+                  <th>Alter</th>
+                </tr>
+                <tr v-for="n in nutzerlist">
+                  <td>{{ n.vorname }}</td>
+                  <td>{{ n.nachname }}</td>
+                  <td>{{ n.alter }}</td>
+                </tr>
+ 
+            </table>
+
+            <a href="" id="abmelden">abmelden</a> 
+        </template>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
