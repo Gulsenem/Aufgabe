@@ -25,7 +25,7 @@ body
     flex-direction: column;
 }
 h1
-{margin: 0;}
+{margin: 0; text-align: center;}
 input
 {
     border:none;
@@ -65,8 +65,10 @@ a:hover
     width:500px;
     padding: 70px 50px;
     border-radius: var(--radius);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(5,1,23,0.5); 
+    box-shadow: 0px 0px 15px 0px rgba(5,1,23,0.5);
 
-    text-align: center;
+    
 }
 .eingabe
 {
@@ -100,7 +102,10 @@ a:hover
     padding-top: 10px;
     text-align: right;
 }
-
+#kontoErstellen
+{
+    text-align: center;
+}
 #kontoErstellen>div
 {
     margin-bottom: 5px;
@@ -116,10 +121,11 @@ table
 table th
 {
     border-bottom: 1px solid var(--secondary);
-    padding-bottom: 5px;   
+    padding-bottom: 5px;  
+    
 }
 
-table tr:nth-child(2)
+table tr:nth-child(2)>td 
 {
     padding-top: 20px,
 }
@@ -133,8 +139,9 @@ table th:nth-child(2), td:nth-child(2)
     border-left: 1px solid var(--secondary);
 }
 
-#abmelden
+ #abmelden
 {
     color:var(--textColor);
     text-decoration: none;
+
 }
